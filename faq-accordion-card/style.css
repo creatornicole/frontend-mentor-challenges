@@ -1,0 +1,130 @@
+
+/******** var's ********/
+:root {
+  /* primary colors */
+  /* text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* neutral colors */
+  /* text */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+  height: 100vh;
+  color: var(--dark-grayish-blue);
+  font-family: 'Kumbh Sans';
+  font-size: 12px;
+  font-weight: 400px;
+}
+
+.faq-box {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px hsl(273, 75%, 37%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+}
+
+/******** images ********/
+.img-box-icon {
+  width: 180px;
+  position: absolute;
+  display: none;
+}
+
+/******** hover states etc. ********/
+.answer {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.question:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+}
+
+/******** others ********/
+h1 {
+  font-size: 28px;
+  color: var(--very-dark-desaturated-blue);
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--light-grayish-blue);
+}
+
+
+/************** adjustments mobile **************/
+@media all and (max-width: 1439px) {
+  .faq-box {
+    width: 260px;
+    margin-top: 60px;
+    padding: 60px 20px;
+  }
+  /******** overlap ********/
+  .img-box {
+    background-image: url(images/illustration-woman-online-mobile.svg), url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center, center 180px;
+    background-size: 250px, 250px;
+    height: 300px;
+    width: 95%;
+    left: 2.5%;
+    position: absolute;
+    top: -170px;
+  }
+
+  .text-box {
+    margin-top: 70px;
+  }
+}
+
+/************** adjustments desktop **************/
+@media all and (min-width: 1440px) {
+  .faq-box {
+    display: flex;
+    text-align: left;
+    padding: 0 85px 0 0;
+  }
+
+  .img-box {
+    background-image: url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -50px 65px, -330px -120px;
+    background-size: 370px, 650px;
+    flex: 50%;
+    margin-right: 70px;
+    padding: 25px;
+    overflow: hidden;
+  }
+
+  .text-box {
+    flex: 50%;
+    padding: 30px 0 50px 0;
+    width: 550px;
+  }
+
+  /******** images ********/
+  .img-box-icon {
+    display: initial;
+    top: 140px;
+    left: -90px;
+  }
+}

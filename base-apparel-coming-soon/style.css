@@ -1,0 +1,103 @@
+/*=========================================================================
+Stylesheet for Frontend-Mentor Challenge Base Apparel Coming Soon 03/22
+
+file: style.css
+date: 09.03.2022
+author: Nicole Gottschall
+==========================================================================*/
+
+/* position of submit button still needs to be fixed
+  -> line 96ff
+*/
+
+
+
+
+/*=========================================================================
+Variables
+==========================================================================*/
+:root {
+  /* primary colors */
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  /* neutral colors */
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  /* gradient colors */
+  --gradient-v1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gradient-v2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+/*=========================================================================
+General Styles
+==========================================================================*/
+body {
+  margin: 0;
+  color: var(--desaturated-red);
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 {
+  color: var(--dark-grayish-red);
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 13px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+/*=========================================================================
+Layout
+==========================================================================*/
+.header-section {
+  padding: 35px 25px;
+}
+
+.img-section {
+  background: url(images/hero-mobile.jpg) no-repeat;
+  background-size: cover;
+  height: 320px;
+}
+
+.text-section {
+  text-align: center;
+  padding: 50px 40px 30px;
+  line-height: 24px;
+}
+
+form {
+  margin: 55px 10px 0;
+  text-align: left;
+}
+
+/*=========================================================================
+Image Settings
+==========================================================================*/
+
+/*=========================================================================
+Others
+==========================================================================*/
+.h1-extra {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+input {
+  padding: 13px 27px;
+  border: .2px solid var(--desaturated-red);
+  border-radius: 60px;
+}
+
+input.email {
+  width: 330px;
+}
+
+input.submit {
+  position: absolute;
+  left: 380px;
+  background: url(images/icon-arrow.svg), var(--gradient-v2);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}

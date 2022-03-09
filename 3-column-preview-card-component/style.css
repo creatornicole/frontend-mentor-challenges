@@ -1,0 +1,109 @@
+
+/******** var's ********/
+:root {
+  /* primary colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* neutral colors */
+  --transparent-white:  hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+body {
+  background-color: var(--very-light-gray);
+    color: var(--transparent-white);
+  font-family: 'Lexend Deca';
+  font-weight: 400;
+  font-size: 15px;
+  padding: 75px 15px;
+}
+
+.container {
+  padding: 50px;;
+}
+
+.first-container {
+  background-color: var(--bright-orange);
+  border-radius: 7px 7px 0 0;
+}
+
+.second-container {
+  background-color: var(--dark-cyan);
+}
+
+.third-container {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 7px 7px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display';
+  font-weight: 700;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  border-radius: 50px;
+  text-align: center;
+  width: 130px;
+  padding: 2px 5px;
+  margin-top: 45px;
+}
+
+.first-button {
+  color: var(--bright-orange);
+}
+
+.second-button {
+  color: var(--dark-cyan);
+}
+
+.third-button {
+  color: var(--very-dark-cyan);
+}
+
+.first-button:hover,
+.second-button:hover,
+.third-button:hover {
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
+
+.first-button:hover {
+  background-color: var(--bright-orange);
+}
+
+.second-button:hover {
+  background-color: var(--dark-cyan);
+}
+
+.third-button:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+/********* adjustment for desktop *********/
+@media all and (min-width: 1440px) {
+  .flex-box {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .button {
+    margin-top: 90px;
+  }
+
+  .first-container {
+    border-radius: 7px 0 0 7px;
+  }
+
+  .third-container {
+    border-radius: 0 7px 7px 0;
+  }
+}

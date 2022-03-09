@@ -1,0 +1,135 @@
+
+/********* var's *********/
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/********* containers *********/
+body {
+  background-color: var(--very-dark-blue-main);
+  color: var(--soft-blue);
+  font-family: Outfit;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.outer-box {
+  background-color: hsl(221, 40%, 12%);
+  width: 390px;
+  height: 620px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer-inner-box {
+  background-color: var(--very-dark-blue-main);
+  width: 320px;
+  height: 570px;
+  border-radius: 20px;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mainBox {
+  background-color: var(--very-dark-blue-card);
+  border-radius: 20px;
+  width: 250px;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  cursor: default;
+}
+
+.imgBox {
+  text-align: center;
+  height: 260px;
+}
+
+.horizontal-paragraphs {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+/********* font-color *********/
+mark.cyan {
+  color: var(--cyan);
+  background: none
+}
+
+mark.white {
+  color: var(--white);
+  background: none;
+}
+
+/********* images *********/
+.img-equilibrium {
+  border-radius: 20px;
+  width: 100%;
+  height: 260px;
+}
+
+.img-avatar {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--white);
+  border-radius: 40px;
+  margin-right: 10px;
+}
+
+.img-eye {
+  width: 40px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+}
+
+.img-align {
+    vertical-align: middle;
+}
+
+/******** other ********/
+hr {
+  margin: 20px 0;
+  padding: .5px;
+  border: none;
+  background-color: var(--very-dark-blue-line);
+}
+h2 {
+  color: var(--white);
+}
+
+/******** hover effect ********/
+mark.white:hover,
+h2:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.imgBox:hover {
+  border-radius: 20px;
+  background-color: var(--cyan);
+  cursor:pointer;
+}
+.imgBox:hover .img-equilibrium {
+  opacity: 0.3;
+}
+.imgBox:hover .img-eye {
+  opacity: 1;
+}

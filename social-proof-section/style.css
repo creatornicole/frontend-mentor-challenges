@@ -1,0 +1,157 @@
+/* mobile first */
+
+/******** var's ********/
+:root {
+  /* primary colors */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  /* neutral colors */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/******** containers ********/
+html {
+  height: 100%;
+}
+
+body {
+  background: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, right bottom;
+  font-family: 'Spartan';
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--dark-grayish-magenta);
+  padding: 60px 15px;
+  text-align: center;
+}
+
+.description p {
+  line-height: 25px;
+}
+
+.ratings {
+  margin: 40px 0 50px 0;
+}
+
+.rating {
+  background-color: var(--light-grayish-magenta);
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  padding: 5px;
+}
+
+.feedback {
+  background-color: var(--very-dark-magenta);
+  color: var(--white);
+  padding: 40px 30px 32px 30px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.rating,
+.feedback {
+  border-radius: 7px;
+  margin: 15px 0;
+}
+.user {
+  display: flex;
+}
+
+.feedback-body {
+  padding-top: 15px;
+}
+
+/******** images ********/
+.img-user {
+  border-radius: 100px;
+  height: 55px;
+  width: 55px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.rating img {
+  padding: 0 4.5px;
+}
+
+/******** others ********/
+h1 {
+  font-size: 38px;
+  color: var(--very-dark-magenta);
+}
+
+.user-description p {
+  margin: 0;
+}
+
+span {
+  color: var(--soft-pink);
+}
+
+/**************** adjustments mobile ****************/
+/* no extra adjustments needed */
+
+/**************** adjustments desktop ****************/
+@media all and (min-width: 1440px) {
+
+  body {
+    background: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, right bottom;
+    margin: 40px 250px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .description {
+    padding: 30px 160px 30px 0;
+    text-align: left;
+  }
+
+  .ratings {
+    margin-top: 54px;
+  }
+
+  .rating {
+    display: flex;
+    padding: 5px 20px;
+    width: 440px;
+  }
+
+  .rating2 {
+    position: relative;
+    left: 50px;
+  }
+  .rating3 {
+    position: relative;
+    left: 100px;
+  }
+
+  .rating p {
+    padding-right: 30px;
+  }
+
+  .feedbacks {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .feedback {
+    width: 350px;
+  }
+
+  .feedback-irene {
+    position: relative;
+    top: 25px;
+    margin: auto 25px;
+  }
+  .feedback-anne {
+    position: relative;
+    top: 50px;
+  }
+
+}

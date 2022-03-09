@@ -1,0 +1,154 @@
+/*=========================================================================
+Stylesheet for Frontend-Mentor Challenge Four card feature section 03/22
+
+file: style.css
+date: 09.03.2022
+author: Nicole Gottschall
+
+Mind the adjustments for different screen sizes at the end of the stylesheet!
+==========================================================================*/
+
+
+
+
+
+/*=========================================================================
+Variables
+==========================================================================*/
+:root {
+  /* primary colors */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  /* neutral colors */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+
+/*=========================================================================
+General Styles
+==========================================================================*/
+body {
+  font-family: 'Poppins';
+  font-size: 15px;
+  color: var(--grayish-blue);
+  font-weight: 400;
+  background-color: var(--very-light-gray);
+}
+
+h1, h2 {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  line-height: 42px;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+
+
+/*=========================================================================
+Layout
+==========================================================================*/
+.header-section {
+  text-align: center;
+  max-width: 550px;
+  margin: auto;
+}
+
+.tools-section {
+  margin-top: 105px;
+}
+
+.tool {
+  margin: 40px auto;
+  padding: 10px 30px 20px;
+  width: 300px;
+  border-radius: 7px;
+  box-shadow: 0 15px 30px var(--grayish-blue);
+}
+
+.supervisor {
+  border-top: 7px solid var(--cyan);
+}
+
+.teambuilder {
+  border-top: 7px solid var(--red);
+}
+
+.karma {
+  border-top: 7px solid var(--orange);
+}
+
+.calculator {
+  border-top: 7px solid var(--blue);
+}
+
+
+/*=========================================================================
+Image Settings
+==========================================================================*/
+
+/*=========================================================================
+Others
+==========================================================================*/
+.lighter {
+  font-weight: 200;
+}
+
+.p-img {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.tools-section p {
+  line-height: 27px;
+}
+
+/*=========================================================================
+Adjustments Mobile (<= 1440px)
+==========================================================================*/
+@media all and (max-width: 1440px) {
+  body {
+    padding: 100px 51px;
+  }
+}
+
+/*=========================================================================
+Adjustments Desktop (>= 1440px)
+==========================================================================*/
+@media all and (min-width: 1440px) {
+  body {
+    padding: 50px;
+  }
+
+  .tools-section {
+    position: relative;
+    display: flex;
+    margin: 15px auto;
+    left: -300px;
+    width: 550px;
+  }
+
+  .flex-middle {
+    margin: 0 40px;
+  }
+
+  .flex-left,
+  .flex-right {
+    margin: auto;
+  }
+}
