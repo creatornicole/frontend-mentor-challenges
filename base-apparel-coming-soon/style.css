@@ -81,21 +81,24 @@ Others
 }
 
 input {
-  padding: 13px 27px;
-  border: .2px solid var(--desaturated-red);
   border-radius: 60px;
 }
 
 input.email {
-  padding-right: 175px;
+  padding: 13px 175px 13px 27px;
+  color: var(--desaturated-red);
+  opacity: .6;
+  border: .2px solid var(--desaturated-red);
 }
 
 input.submit {
+  padding: 14px 28px;
   position: relative;
   top: -44px;
   left: 145px;
   background: url(images/icon-arrow.svg), var(--gradient-v2);
   background-repeat: no-repeat;
   background-position: center;
-
+  border: none;
+  box-shadow: 0 5px 30px var(--desaturated-red);
 }
