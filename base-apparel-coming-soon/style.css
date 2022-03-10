@@ -67,8 +67,8 @@ Layout
 }
 
 form {
-  margin: 55px 10px 0;
-  text-align: left;
+  margin: 60px auto 0;
+  max-width: 400px;
 }
 
 /*=========================================================================
@@ -90,12 +90,13 @@ input {
 }
 
 input.email {
-  width: 330px;
+  padding-right: 175px;
 }
 
 input.submit {
-  position: absolute;
-  left: 380px;
+  position: relative;
+  top: -44px;
+  left: 145px;
   background: url(images/icon-arrow.svg), var(--gradient-v2);
   background-repeat: no-repeat;
   background-position: center;
