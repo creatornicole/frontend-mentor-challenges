@@ -6,7 +6,7 @@ date: 09.03.2022
 author: Nicole Gottschall
 ==========================================================================*/
 
-
+/* instead of flex use grid-layout */
 
 
 
@@ -54,7 +54,6 @@ Layout
 .img-section {
   background: url(images/hero-mobile.jpg) no-repeat;
   background-size: cover;
-  height: 320px;
 }
 
 .text-section {
@@ -101,4 +100,37 @@ input.submit {
   background-position: center;
   border: none;
   box-shadow: 0 5px 30px var(--desaturated-red);
+}
+
+/*=========================================================================
+Adjustments for Mobile (<= 1440px)
+==========================================================================*/
+@media all and (max-width: 1440px) {
+  .img-section {
+    height: 320px;
+  }
+}
+
+/*=========================================================================
+Adjustments for Desktop (>= 1440px)
+==========================================================================*/
+@media all and (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .text-section {
+    padding: 30px;
+  }
+
+  .img-section {
+    flex: auto;
+    order: 2;
+    background: url(images/hero-desktop.jpg) no-repeat;
+    background-size: cover;
+  }
 }
