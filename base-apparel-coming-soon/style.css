@@ -130,6 +130,8 @@ Adjustments for Desktop (>= 1440px)
     padding-left: 210px;
     font-size: 18px;
     height: 100vh;
+    background: url(images/bg-pattern-desktop.svg) no-repeat;
+    background-size: 1400px 982px;
   }
 
   h1 {
