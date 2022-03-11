@@ -20,7 +20,7 @@ Mobile Version \
 ## Learnings
 
 - use grid layout for two dimensional positioning - grid-template-areas:
-´´´css
+ ```css
 .grid-container {
   display: grid;
   grid-template-columns: 55% 45%;
@@ -41,6 +41,6 @@ Mobile Version \
 .item3 {
   grid-area: item3;
 }
-´´´
+```
 
 - if you want to use form on your webpage make sure to include *form validation*
