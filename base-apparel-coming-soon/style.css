@@ -4,9 +4,11 @@ Stylesheet for Frontend-Mentor Challenge Base Apparel Coming Soon 03/22
 file: style.css
 date: 09.03.2022
 author: Nicole Gottschall
+
+Mind the adjustments for different screen sizes at the end of the stylesheet!
 ==========================================================================*/
 
-/* instead of flex use grid-layout */
+
 
 
 
@@ -47,23 +49,17 @@ h1 {
 /*=========================================================================
 Layout
 ==========================================================================*/
-.header-section {
-  padding: 35px 25px;
-}
-
 .img-section {
   background: url(images/hero-mobile.jpg) no-repeat;
   background-size: cover;
 }
 
 .text-section {
-  text-align: center;
   padding: 50px 40px 30px;
   line-height: 24px;
 }
 
 form {
-  margin: 60px auto 0;
   max-width: 400px;
 }
 
@@ -92,9 +88,6 @@ input.email {
 
 input.submit {
   padding: 14px 28px;
-  position: relative;
-  top: -44px;
-  left: 145px;
   background: url(images/icon-arrow.svg), var(--gradient-v2);
   background-repeat: no-repeat;
   background-position: center;
@@ -106,8 +99,26 @@ input.submit {
 Adjustments for Mobile (<= 1440px)
 ==========================================================================*/
 @media all and (max-width: 1440px) {
+  .header-section {
+    padding: 35px 25px;
+  }
+
   .img-section {
     height: 320px;
+  }
+
+  .text-section {
+    text-align: center;
+  }
+
+  form {
+    margin: 60px auto 0;
+  }
+
+  input.submit {
+    position: relative;
+    top: -44px;
+    left: 145px;
   }
 }
 
@@ -116,21 +127,56 @@ Adjustments for Desktop (>= 1440px)
 ==========================================================================*/
 @media all and (min-width: 1440px) {
   body {
+    padding-left: 210px;
+    font-size: 18px;
     height: 100vh;
   }
 
-  .content {
-    display: flex;
+  h1 {
+    font-size: 56px;
+    line-height: 65px;
+  }
+
+  .header-section {
+    grid-area: header;
+    padding: 80px 40px 0;
   }
 
   .text-section {
-    padding: 30px;
+    grid-area: text;
+    line-height: 35px;
+    width: 450px;
   }
 
   .img-section {
-    flex: auto;
-    order: 2;
+    grid-area: img;
+    height: 100vh;
     background: url(images/hero-desktop.jpg) no-repeat;
     background-size: cover;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 180px auto;
+    grid-template-areas:
+      "header img"
+      "text img";
+  }
+
+  form {
+    margin: 60px 0;
+  }
+
+  input {
+    width: 100%;
+    width: 230px;
+  }
+
+  input.submit {
+    position: relative;
+    top: -44px;
+    left: 365px;
+    width: 70px;
   }
 }
