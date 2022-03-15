@@ -43,4 +43,13 @@ Mobile Version \
 }
 ```
 
-- if you want to use form on your webpage make sure to include *form validation*
+- *form validation* is important if we're accepting user input\
+  - two different forms: client side and server side validation
+  - client side validation is a tool for giving quick feedback to the user
+
+- check validation of entered Email Address:
+  - set up validation with HTML functionality
+    - making fields required with attribute *required*
+    - restricting types of data using *type*
+    - if input matches HTML validation, it gets assigned a pseudo-class :valid, and :invalid if it doesn't
+  - set up validation using JavaScript

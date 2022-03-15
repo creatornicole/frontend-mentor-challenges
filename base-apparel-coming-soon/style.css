@@ -67,6 +67,7 @@ form {
 Image Settings
 ==========================================================================*/
 
+
 /*=========================================================================
 Others
 ==========================================================================*/
@@ -87,12 +88,18 @@ input.email {
 }
 
 input.submit {
-  padding: 14px 28px;
+  padding: 14px 0;
+  width: 70px;
   background: url(images/icon-arrow.svg), var(--gradient-v2);
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   box-shadow: 0 5px 30px var(--desaturated-red);
+}
+
+.err-message {
+  font-size: 13px;
+  color: var(--soft-red);
 }
 
 /*=========================================================================
@@ -118,7 +125,13 @@ Adjustments for Mobile (<= 1440px)
   input.submit {
     position: relative;
     top: -44px;
-    left: 145px;
+    left: 150px;
+  }
+
+  .err-message {
+    position: relative;
+    top: -40px;
+    left: -70px;
   }
 }
 
@@ -178,7 +191,12 @@ Adjustments for Desktop (>= 1440px)
   input.submit {
     position: relative;
     top: -44px;
-    left: 365px;
-    width: 70px;
+    left: 368px;
+  }
+
+  .err-message {
+    position: relative;
+    top: -40px;
+    left: 18px;
   }
 }

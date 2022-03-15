@@ -19,26 +19,67 @@ correctly.
 preparation
 ==========================================================================*/
 /* get needed elements */
-btn = document.querySelector('.submit');
+let btn = document.querySelector('.submit');
+let form = document.querySelector('.form');
+let inputEmail = document.querySelector('input.email');
+let email = document.querySelector('input.email').value;
+let err = document.querySelector('.err-message');
 
+let emailPattern = /^[a-zA-Z0-9_.]+@[A-Za-z0-9]+\.[a-z]{2,10}$/;
+
+/* check if button is clicked */
+let clicked = false;
 
 /*=========================================================================
 hover event
 ==========================================================================*/
 btn.addEventListener("mouseover", function() {
-  btn.style.cssText = `
-    cursor: pointer;
-    background: url(images/icon-arrow.svg), var(--desaturated-red);
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 2px 12px 25px var(--desaturated-red);
-  `;
+  if(clicked) {
+    btn.style.cursor = "pointer";
+    btn.style.background = "url(images/icon-arrow.svg), var(--desaturated-red)";
+    btn.style.backgroundRepeat = "no-repeat";
+    btn.style.backgroundPosition = "center";
+  } else {
+    btn.style.cursor = "pointer";
+    btn.style.background = "url(images/icon-arrow.svg), var(--desaturated-red)";
+    btn.style.backgroundRepeat = "no-repeat";
+    btn.style.backgroundPosition = "center";
+    btn.style.boxShadow = "2px 12px 25px var(--desaturated-red)";
+  }
 });
 
 btn.addEventListener("mouseout", function() {
   btn.style = "inherit";
+
+  if(clicked) {
+    btn.style.padding = "15px 0";
+    btn.style.top = "-46px";
+  }
 });
 
 /*=========================================================================
-error message (error occurs when user submits form with false input fields)
+form validation
 ==========================================================================*/
+btn.addEventListener("click", function() {
+  clicked = true;
+  email = document.querySelector('input.email').value;
+
+  if(email == "") {
+    changeInputToInvalidDesign();
+    err.innerHTML = "Please enter your email";
+  } else if(!emailPattern.test(email)) {
+    changeInputToInvalidDesign();
+    err.innerHTML = "Please provide a valid email";
+  } else {
+    btn.setAttribute("type", "submit");
+  }
+});
+
+function changeInputToInvalidDesign() {
+  inputEmail.style.opacity = "1";
+  inputEmail.style.background = "url('images/icon-error.svg') no-repeat 78%";
+  inputEmail.style.border = "2px solid var(--soft-red)";
+
+  btn.style.padding = "15px 0";
+  btn.style.top = "-46px";
+}
