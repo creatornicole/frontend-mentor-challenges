@@ -14,7 +14,7 @@ The user should be able to:
   - the email address is not formatted correctly
 
 Desktop version, active states:\
-![](design/active-states.jpg);
+![](design/active-states.jpg)
 
 Mobile version:\
-![](design/mobile-design.jpg);
+![](design/mobile-design.jpg)
