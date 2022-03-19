@@ -18,3 +18,7 @@ Desktop version, active states:\
 
 Mobile version:\
 ![](design/mobile-design.jpg)
+
+## Learnings
+
+- change design of placeholder attribute with _::placeholder_

@@ -6,8 +6,7 @@ date: 15.03.2022
 author: Nicole Gottschall
 ==========================================================================*/
 
-/* font-family: Poppins
-font-weights: 400, 500, 600, 700 */
+
 
 
 
@@ -29,12 +28,43 @@ Variables
 General Styles
 ==========================================================================*/
 body {
+  padding: 75px 30px;
+  font-family: 'Poppins';
   font-size: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  background: url("images/bg-intro-mobile.png") var(--red);
+}
+
+h1 {
+  margin-bottom: 35px;
+  line-height: 40px;
+}
+
+p {
+  line-height: 28px;
 }
 
 /*=========================================================================
 Layout
 ==========================================================================*/
+.trial-box {
+  margin-top: 65px;
+  padding: 1px 75px;
+  background-color: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -7px var(--dark-blue);
+}
+
+.sign-up-form {
+  margin-top: 30px;
+  padding: 25px;
+  color: var(--grayish-blue);
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -7px var(--dark-blue);
+}
 
 /*=========================================================================
 Image Settings
@@ -43,3 +73,52 @@ Image Settings
 /*=========================================================================
 Others
 ==========================================================================*/
+.trial-box span {
+  font-weight: 700;
+}
+
+.sign-up-form button {
+  margin-bottom: 12px;
+  padding: 18px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  width: 100%;
+  background-color: var(--green);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px -9px var(--dark-blue);
+}
+
+.sign-up-form button:hover {
+  cursor: pointer;
+}
+
+input {
+  margin-bottom: 12px;
+  padding: 12px 0 12px 15px;
+  width: 95%;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+::placeholder {
+  color: var(--dark-blue);
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+.sign-up-form p {
+  margin: 0 auto;
+  font-size: 11px;
+  line-height: 20px;
+  width: 75%;
+}
+
+.sign-up-form p span {
+  color: var(--red);
+  font-weight: 600;
+}
