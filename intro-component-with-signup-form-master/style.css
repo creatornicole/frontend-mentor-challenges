@@ -77,7 +77,7 @@ Others
   font-weight: 700;
 }
 
-.sign-up-form button {
+.submit {
   margin-bottom: 12px;
   padding: 18px 0;
   font-size: 14px;
@@ -90,10 +90,6 @@ Others
   border: none;
   border-radius: 5px;
   box-shadow: 0 10px 10px -9px var(--dark-blue);
-}
-
-.sign-up-form button:hover {
-  cursor: pointer;
 }
 
 input {
