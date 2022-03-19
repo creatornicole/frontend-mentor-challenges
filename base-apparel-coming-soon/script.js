@@ -26,6 +26,7 @@ let email = document.querySelector('input.email').value;
 let err = document.querySelector('.err-message');
 
 let emailPattern = /^[a-zA-Z0-9_.]+@[A-Za-z0-9]+\.[a-z]{2,10}$/;
+let regexEmpty = /^[A-Za-z0-9]/;
 
 /* check if button is clicked */
 let clicked = false;
@@ -64,7 +65,7 @@ btn.addEventListener("click", function() {
   clicked = true;
   email = document.querySelector('input.email').value;
 
-  if(email == "") {
+  if(!regexEmpty.test(email)) {
     changeInputToInvalidDesign();
     err.innerHTML = "Please enter your email";
   } else if(!emailPattern.test(email)) {
