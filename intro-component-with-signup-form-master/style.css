@@ -4,6 +4,8 @@ Stylesheet for Frontend-Mentor Challenge Intro Component with Sign Up Form 03/22
 file: style.css
 date: 15.03.2022
 author: Nicole Gottschall
+
+Mind the adjustments for different screen sizes at the end of the stylesheet.
 ==========================================================================*/
 
 
@@ -33,8 +35,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #FFFFFF;
-  text-align: center;
-  background: url("images/bg-intro-mobile.png") var(--red);
 }
 
 h1 {
@@ -98,6 +98,8 @@ Others
 
 input {
   margin-bottom: 12px;
+  color: var(--dark-blue);
+  font-family: 'Poppins';
   padding: 12px 0 12px 15px;
   width: 95%;
   border-width: 2px;
@@ -122,3 +124,42 @@ input {
   color: var(--red);
   font-weight: 600;
 }
+
+/*=========================================================================
+Adjustments Mobile (<=1440px)
+==========================================================================*/
+@media all and (max-width: 1440px) {
+  body {
+    text-align: center;
+    background: url("images/bg-intro-mobile.png") var(--red);
+  }
+}
+
+/*=========================================================================
+Adjustments Desktop (>=1440px)
+==========================================================================*/
+@media all and (min-width: 1440px) {
+  body {
+    background: url("images/bg-intro-desktop.png") var(--red);
+  }
+
+  .flex-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1048px;
+  }
+
+  .flex-left {
+    flex: 50%;
+  }
+
+  .flex-left-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 150px;
+  }
