@@ -16,10 +16,10 @@ The users should be able to:
 - see hover state on desktop for the Sign Up call-to-action
 
 On Desktop:\
-![design/desktop-design.jpg]
+![]([design/desktop-design.jpg)
 
 On Mobile:\
-![design/mobile-design.jpg]
+![](design/mobile-design.jpg)
 
 
 ## Learnings
