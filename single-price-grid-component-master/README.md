@@ -9,14 +9,14 @@ building realistic projects.
 ## Overview
 
 This challenge is about building out this pricing component and get it looking as close
-to the following design as possible.\
+to the following design as possible.
 
 The users should be able to:
 - view the optimal layout for the component depending on their device's screen size
 - see hover state on desktop for the Sign Up call-to-action
 
 On Desktop:\
-![]([design/desktop-design.jpg)
+![](design/desktop-design.jpg)
 
 On Mobile:\
 ![](design/mobile-design.jpg)
