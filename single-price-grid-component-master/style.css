@@ -61,13 +61,11 @@ Layout
 .intro-container,
 .sub-container,
 .reasons-container {
-  margin: 0 20px;
   padding: 20px 30px 35px;
 }
 
 .intro-container {
   background-color: var(--white);
-  border-radius: 7px 7px 0 0;
 }
 
 .sub-container {
@@ -78,7 +76,6 @@ Layout
 .reasons-container {
   background-color: var(--lighter-cyan);
   color: var(--white);
-  border-radius: 0 0 7px 7px;
 }
 
 /*=========================================================================
@@ -105,13 +102,63 @@ ul {
 /*=========================================================================
 Adjustments for Mobile (<= 1440px)
 ==========================================================================*/
-@media all and (max-width: 1440px) {
+@media all and (max-width: 1240px) {
 
+  .intro-container,
+  .sub-container,
+  .reasons-container {
+    margin: 0 20px;
+  }
+
+  .intro-container {
+    border-radius: 7px 7px 0 0;
+  }
+
+  .reasons-container {
+    border-radius: 0 0 7px 7px;
+  }
 }
 
 /*=========================================================================
 Adjustments for Desktop (>= 1440px)
 ==========================================================================*/
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1240px) {
+
+  body {
+    margin: 50px 330px;
+  }
+
+  .flex-bottom {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .flex-bottom,
+  .sub-container,
+  .reasons-container {
+    width: 100%;
+  }
+
+  .intro-container {
+    border-radius: 7px 7px 0 0;
+  }
+
+  .sub-container {
+    border-radius: 0 0 0 7px;
+  }
+
+  .reasons-container {
+    border-radius: 0 0 7px 0;
+  }
+
+
+
+
+
+
+
+
+
+
 
 }
